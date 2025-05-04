@@ -4,10 +4,14 @@ Este repositório é utilizado exclusivamente para hospedagem do projeto **DC** 
 ## Mapa
 ```
 Home
-└─ Sobre
+├─ Sobre
+└─ Workflow
+   ├─ Visão geral
+   └─ Ajuda
 ```
 
 ## Informações
-- Pull Requests não são aceitos.
 - Copyright © 2021-2025 David Camargo.
-- Este projeto está disponível sob os termos da licença [CC-BY-NC-SA-4.0](/license.txt).
+- Este projeto possui componentes sob [Licenças](/License.md) distintas, verifique a documentação para mais detalhes.
+- Todas as outras marcas mencionadas são de propriedade de seus respectivos proprietários.
+- Pull Requests não são aceitos.
