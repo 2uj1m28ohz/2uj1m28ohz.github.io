@@ -6,6 +6,6 @@ Este projeto está disponível sob os seguintes termos:
 
 Para mais detalhes, verifique os links.
 
-[CC]: /Licenses/cc-by-nc-sa-4.0.txt
-[Apache]: /Licenses/apache-2.0.txt
+[CC]: /licenses/cc-by-nc-sa-4.0.txt
+[Apache]: /licenses/apache-2.0.txt
 [Google]: https://fonts.google.com/icons
