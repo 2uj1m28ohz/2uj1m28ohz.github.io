@@ -4,6 +4,45 @@
     https://github.com/2uj1m28ohz
 */
 
+/* -------------------------------------------------------------------------------------------------------------------------------- GLOBAL */
+
+:root {
+    --main-background: #fafafa;
+    --main-background-blur: #fafafacc;
+    --header-background-blur: #ffffffcc;
+
+    --section-background: #ffffff;
+    --section-background-inner: #b5cbce;
+
+    --link-header: #000000;
+    --link-nav: #444444;
+    --link-nav-hover: #000000;
+    --link-nav-active: #dddddd;
+    --link-genetic: #0066cc;
+    --link-genetic-hover: #00aaff;
+    --link-genetic-active: #dddddd;
+
+    --line: #dddddd;
+
+    --text-dark: #525252;
+    --text-light: #888888;
+    --note-foreground: #999999;
+    --note-background: #efefef;
+    --code-foreground: #5353dd;
+    --code-background: #ededff;
+    --code-snippet-foreground: #ffffff;
+    --code-snippet-background: #000000;
+
+    --workflow-gradient-1: #0894ff;
+    --workflow-gradient-2: #c959dd;
+    --workflow-gradient-3: #ff2e54;
+    --workflow-gradient-4: #ff9004;
+    --database-gradient-1: #bed300;
+    --database-gradient-2: #78e016;
+    --database-gradient-3: #0ee7b1;
+    --database-gradient-4: #2eceff;
+}
+
 @import url(
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'
 );
@@ -11,146 +50,140 @@
 body {
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
-    font-size: 14px;
-    color: #525252;
-    background-color: #fafafa;
-    min-width: 800px;
+    color: var(--text-dark);
+    background-color: var(--main-background);
     width: 100%;
     height: 100%;
 }
 
-#header-link {
-    color: #000000;
-}
-
-#nav-link {
-    margin: 0 5px;
-    text-decoration: none;
-    color: #444444;
-    transition: color 0.3s ease;
-}
-
-#nav-link:hover {
-    color: #000000;
-}
-
-#nav-link:active {
-    color: #dddddd;
-}
-
 a {
     text-decoration: none;
-    color: #0066cc;
-    transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #00aaff;
-}
-
-a:active {
-    color: #dddddd;
+h1 {
+    max-width: 1000px;
+    margin: auto;
 }
 
 hr {
     border: none;
     height: 1px;
-    background-color: #dddddd;
+    margin-top: 20px;
+    background-color: var(--line);
 }
 
-.header {
+blockquote {
+    font-size: 14px;
+    padding: 0.1em 0.2em;
+    color: var(--note-foreground);
+    background-color: var(--note-background);
+    border-radius: 5px;
+}
+
+header {
     text-align: center;
     font-size: 20px;
     padding: 16px;
     backdrop-filter: blur(10px);
-    background-color: #ffffffcc;
-    border-bottom: 1px solid #dddddd;
+    background-color: var(--header-background-blur);
+    border-bottom: 1px solid var(--line);
 }
 
-.nav {
+header a {
+    color: var(--link-header);
+}
+
+nav {
     text-align: center;
     font-size: 12px;
     padding: 16px;
     backdrop-filter: blur(10px);
-    background-color: #fafafacc;
+    background-color: var(--main-background-blur);
     position: sticky;
     z-index: 1;
     top: 0;
     animation: review 0.5s ease-out;
 }
 
-.main {
+nav a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: var(--link-nav);
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--link-nav-hover);
+}
+
+nav a:active {
+    color: var(--link-nav-active);
+}
+
+main {
+    font-size: 16px;
     text-align: left;
-    padding: 10px;
-    width: 80%;
     margin: auto;
-    background-color: #fafafa;
+    background-color: var(--main-background);
     animation: review 0.5s ease-out;
 }
 
-.footer {
+main a {
+    color: var(--link-genetic);
+    transition: color 0.3s ease;
+}
+
+main a:hover {
+    color: var(--link-genetic-hover)
+}
+
+main a:active {
+    color: var(--link-genetic-active)
+}
+
+footer {
     text-align: center;
-    font-size: 10px;
-    color: #888888;
+    font-size: 12px;
+    color: var(--text-light);
     padding: 20px;
-    width: 80%;
     margin: auto;
-    min-width: 800px;
     max-width: 1000px;
     animation: review 0.5s ease-out;
 }
 
-.workflow-card,
-.database-card {
-    font-family: 'JetBrains Mono', monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 80px;
-    color: #fafafa;
-    min-width: 800px;
-    height: 600px;
-    margin: auto;
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+footer a {
+    color: var(--link-genetic);
+    transition: color 0.3s ease;
 }
 
-.workflow-card::before {
-    content: "W O R K F L O W";
-    background: linear-gradient(120deg, #aa66ff, #ff4141);
-    background-clip: text;
-    color: transparent;
+footer a:hover {
+    color: var(--link-genetic-hover)
 }
 
-.database-card::before {
-    content: "D A T A B A S E";
-    background: linear-gradient(120deg, #00bbcc, #44cc88);
-    background-clip: text;
-    color: transparent;
+footer a:active {
+    color: var(--link-genetic-active)
 }
 
-.container-vertical {
+.generic,
+.hero,
+.screenshot,
+.feature,
+.resource,
+.download {
     max-width: 1000px;
-    margin: auto;
+    margin: 40px auto;
+    background: var(--section-background);
+    border-radius: 20px;
+    box-sizing: border-box;
 }
 
-.content-vertical {
-    margin: auto;
-    min-width: 800px;
-    max-width: 1000px;
-    background: #ffffff;
-    border-radius: 20px;
+.generic {
     padding: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 ::selection {
-    color: #fafafa;
-    background-color: #525252;
+    color: var(--main-background);
+    background-color: var(--text-dark);
 }
 
 @keyframes review {
@@ -158,8 +191,222 @@ hr {
         transform: translateY(10px);
         opacity: 0;
     }
+
     to {
         transform: translateY(1);
         opacity: 1;
     }
+}
+
+@media (max-width: 1000px) {
+    .generic,
+    .hero,
+    .hero-workflow,
+    .hero-database,
+    .screenshot,
+    .feature,
+    .resource,
+    .download {
+        border-radius: 0 !important;
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- HOME */
+
+.hero-workflow,
+.hero-database {
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    padding: 40px;
+    height: 600px;
+    max-width: 1400px;
+    margin: 40px auto;
+    background: var(--section-background);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+main a.gradient-workflow {
+    background:  linear-gradient(
+        120deg,
+        var(--workflow-gradient-1),
+        var(--workflow-gradient-2),
+        var(--workflow-gradient-3),
+        var(--workflow-gradient-4)
+    );
+    display: inline-block;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: clamp(0.1em, 3vw, 2em);
+    white-space: nowrap;
+}
+
+main a.gradient-database {
+    background:  linear-gradient(
+        120deg,
+        var(--database-gradient-1),
+        var(--database-gradient-2),
+        var(--database-gradient-3),
+        var(--database-gradient-4)
+    );
+    display: inline-block;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: clamp(0.1em, 3vw, 2em);
+    white-space: nowrap;
+}
+
+a.gradient-workflow:hover {
+    color: var(--text-dark);
+}
+
+a.gradient-database:hover {
+    color: var(--text-dark);
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- WORKFLOW */
+
+.hero {
+    flex-direction: column;
+}
+
+.hero-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 120px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.hero-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 120px;
+}
+
+.screenshot {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 475px;
+    background-color: var(--section-background-inner);
+    overflow: hidden;
+}
+
+.screenshot-image {
+    height: auto;
+    transform: translateY(100px);
+}
+
+.feature {
+    display: flex;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.feature-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.feature-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: var(--section-background-inner);
+}
+
+.feature-left-inner {
+    text-align: left;
+    padding: 40px;
+}
+
+.feature-right-image {
+    max-width: 128px;
+    max-height: 128px;
+}
+
+.resource {
+    display: flex;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.resource-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    box-sizing: border-box;
+}
+
+.resource-right {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.resource-left-inner {
+    text-align: left;
+    padding: 40px;
+}
+
+.resource-right-inner {
+    text-align: left;
+    padding: 40px;
+}
+
+.download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 200px;
+}
+
+.download a {
+    font-size: 30px;
+    color: var(--text-dark);
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- HELP */
+
+code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    padding: 0.1em 0.2em;
+    color: var(--code-foreground);
+    background-color: var(--code-background);
+    border-radius: 5px;
+}
+
+.code-snippet {
+    background-color: var(--code-snippet-background);
+    border-radius: 10px;
+    overflow-x: auto;
+    padding: 1em;
+}
+
+.code-snippet pre code {
+    background: transparent;
+    color: var(--code-snippet-foreground);
 }
