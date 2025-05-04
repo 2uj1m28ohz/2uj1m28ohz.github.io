@@ -12,6 +12,6 @@ Home
 
 ## Informações
 - Copyright © 2021-2025 David Camargo.
-- Este projeto possui componentes sob [Licenças](/License.md) distintas, verifique a documentação para mais detalhes.
+- Este projeto possui componentes sob [Licenças](/license.md) distintas, verifique a documentação para mais detalhes.
 - Todas as outras marcas mencionadas são de propriedade de seus respectivos proprietários.
 - Pull Requests não são aceitos.
